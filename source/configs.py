@@ -11,4 +11,4 @@ SYSTEM_MESSAGE = 'You are a data scientist and work with SQL databases. You will
 PREVIOUS_MESSAGES = []
 
 # Set path to env
-PATH_TO_ENV = "/Users/naman/Desktop/Code/Python/QueryGeneration/keys.env"
+PATH_TO_ENV = "/Users/naman/Desktop/Code/Python/QueryGeneration/credentials.env"
