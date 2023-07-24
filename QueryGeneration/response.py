@@ -15,7 +15,7 @@ def respond(request):
     openai.api_key = os.getenv("OPENAI_KEY")
 
     tables = generate_table_desc(
-        table_list=body["tables"],
+        table_list=body["table_list"],
         user=os.getenv("MYSQL_USER"),
         key=os.getenv("MYSQL_KEY"),
         host=os.getenv("MYSQL_HOST"),
@@ -23,7 +23,7 @@ def respond(request):
     )
 
     message, usage = generate_sql(
-        query=body["user_query"],
+        query=body["userQuery"],
         tables_desc=tables
     )
 
