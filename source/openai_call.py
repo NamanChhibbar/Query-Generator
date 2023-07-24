@@ -16,6 +16,6 @@ def chat_completion_call(prompt, model, sys_msg: str="", prev_msgs=[]):
     message = None
     usage = 0
     if response["choices"][0]["finish_reason"] == "stop":
-        message = response['choices'][0]['message']['content']
+        message = response["choices"][0]["message"]["content"]
         usage = response["usage"]["total_tokens"]
     return message, usage
