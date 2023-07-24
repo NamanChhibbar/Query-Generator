@@ -1,9 +1,10 @@
 import openai
 
 def chat_completion_call(prompt, model, sys_msg: str="", prev_msgs=[]):
+    """Sends a chat completion call to openai"""
 
     messages = [{"role": "system", "content": sys_msg}] if sys_msg else []
-    messages.extend(prev_msgs)
+    if prev_msgs: messages.extend(prev_msgs)
     messages.append({
         "role": "user",
         "content": prompt

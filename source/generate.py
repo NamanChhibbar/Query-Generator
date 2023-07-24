@@ -4,6 +4,8 @@ from . import configs
 from .openai_call import chat_completion_call
 
 def generate_sql(query, tables_desc: list[dict]):
+    """Generates SQL command based on user query and tables given"""
+
     prompt = ""
     for table in tables_desc:
         prompt += f"Table name: {table['name']}\n\nTable schema:\n"
@@ -24,6 +26,8 @@ def generate_sql(query, tables_desc: list[dict]):
     )
 
 def generate_table_desc(table_list, user, key, host, db):
+    """Gets the descriptions and sample rows of the tables given from database"""
+
     connection = connect(
         user=user,
         password=key,
