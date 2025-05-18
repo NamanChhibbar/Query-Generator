@@ -11,7 +11,7 @@ pip install -r requirements.txt
 to install the Python dependencies
 
 ### Create `credentials.env`
-Create `credentials.env` using the format specified in `.env.example` and set the path of `credentials.env` in `source/configs.py`.
+Create `.env` file using the format specified in `.env.example` and set the path of `.env` in `source/configs.py`.
 
 ## Server startup
 Run
